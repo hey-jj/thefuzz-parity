@@ -1,0 +1,4 @@
+disallowed-methods = [
+  { path = "str::len", reason = "scoring indices and lengths use Unicode scalar values" },
+  { path = "char::is_alphanumeric", reason = "text processing uses Unicode general categories L and N" },
+]

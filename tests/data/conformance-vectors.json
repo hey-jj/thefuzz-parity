@@ -1,0 +1,4049 @@
+{
+ "provenance": {
+  "source": "REAL thefuzz (not derived)",
+  "thefuzz_version": "0.22.1",
+  "rapidfuzz_version": "3.14.5",
+  "python_version": "3.14.7",
+  "generator": "genvec.py",
+  "notes": "expected_score values are exact integers as returned by thefuzz; scorer defaults: ratio/partial_ratio never preprocess; token/Q/W scorers use full_process with force_ascii=True unless the function name says otherwise.",
+  "amendment_1": {
+   "date": "2026-08-21",
+   "source": "REAL thefuzz (not derived)",
+   "thefuzz_version": "0.22.1",
+   "rapidfuzz_version": "3.14.5",
+   "generator": "genvec_amend1.py",
+   "notes": "Appends 72 combining_mark scorer vectors (Mn/Mc marks: Hebrew niqqud, Arabic harakat, Devanagari matras/anusvara/virama, combining Latin U+0363-036F, Greek ypogegrammeni U+0345), 18 wratio_half_boundary vectors (12 WRatio, 6 UWRatio) pinning normalized [0,1]-space composite scoring, and 18 full_process_cases for the same mark inputs. Every entry carries amendment: 1 and a provenance string. Pinned pre-amendment entries are unchanged."
+  }
+ },
+ "vector_count": 490,
+ "vectors": [
+  {
+   "category": "ascii",
+   "input_a": "new york mets",
+   "input_b": "new york mets",
+   "function": "ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "ascii",
+   "input_a": "new york mets",
+   "input_b": "new york mets",
+   "function": "partial_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "ascii",
+   "input_a": "new york mets",
+   "input_b": "new york mets",
+   "function": "token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "ascii",
+   "input_a": "new york mets",
+   "input_b": "new york mets",
+   "function": "token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "ascii",
+   "input_a": "new york mets",
+   "input_b": "new york mets",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "ascii",
+   "input_a": "new york mets",
+   "input_b": "new york mets",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "ascii",
+   "input_a": "new york mets",
+   "input_b": "new york mets",
+   "function": "WRatio",
+   "expected_score": 100
+  },
+  {
+   "category": "ascii",
+   "input_a": "new york mets",
+   "input_b": "new york mets",
+   "function": "QRatio",
+   "expected_score": 100
+  },
+  {
+   "category": "ascii",
+   "input_a": "new york mets",
+   "input_b": "new YORK mets",
+   "function": "ratio",
+   "expected_score": 69
+  },
+  {
+   "category": "ascii",
+   "input_a": "new york mets",
+   "input_b": "new YORK mets",
+   "function": "partial_ratio",
+   "expected_score": 69
+  },
+  {
+   "category": "ascii",
+   "input_a": "new york mets",
+   "input_b": "new YORK mets",
+   "function": "token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "ascii",
+   "input_a": "new york mets",
+   "input_b": "new YORK mets",
+   "function": "token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "ascii",
+   "input_a": "new york mets",
+   "input_b": "new YORK mets",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "ascii",
+   "input_a": "new york mets",
+   "input_b": "new YORK mets",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "ascii",
+   "input_a": "new york mets",
+   "input_b": "new YORK mets",
+   "function": "WRatio",
+   "expected_score": 100
+  },
+  {
+   "category": "ascii",
+   "input_a": "new york mets",
+   "input_b": "new YORK mets",
+   "function": "QRatio",
+   "expected_score": 100
+  },
+  {
+   "category": "ascii",
+   "input_a": "this is a test",
+   "input_b": "this is a test!",
+   "function": "ratio",
+   "expected_score": 97
+  },
+  {
+   "category": "ascii",
+   "input_a": "this is a test",
+   "input_b": "this is a test!",
+   "function": "partial_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "ascii",
+   "input_a": "this is a test",
+   "input_b": "this is a test!",
+   "function": "token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "ascii",
+   "input_a": "this is a test",
+   "input_b": "this is a test!",
+   "function": "token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "ascii",
+   "input_a": "this is a test",
+   "input_b": "this is a test!",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "ascii",
+   "input_a": "this is a test",
+   "input_b": "this is a test!",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "ascii",
+   "input_a": "this is a test",
+   "input_b": "this is a test!",
+   "function": "WRatio",
+   "expected_score": 100
+  },
+  {
+   "category": "ascii",
+   "input_a": "this is a test",
+   "input_b": "this is a test!",
+   "function": "QRatio",
+   "expected_score": 100
+  },
+  {
+   "category": "ascii",
+   "input_a": "fuzzy wuzzy was a bear",
+   "input_b": "wuzzy fuzzy was a bear",
+   "function": "ratio",
+   "expected_score": 91
+  },
+  {
+   "category": "ascii",
+   "input_a": "fuzzy wuzzy was a bear",
+   "input_b": "wuzzy fuzzy was a bear",
+   "function": "partial_ratio",
+   "expected_score": 93
+  },
+  {
+   "category": "ascii",
+   "input_a": "fuzzy wuzzy was a bear",
+   "input_b": "wuzzy fuzzy was a bear",
+   "function": "token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "ascii",
+   "input_a": "fuzzy wuzzy was a bear",
+   "input_b": "wuzzy fuzzy was a bear",
+   "function": "token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "ascii",
+   "input_a": "fuzzy wuzzy was a bear",
+   "input_b": "wuzzy fuzzy was a bear",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "ascii",
+   "input_a": "fuzzy wuzzy was a bear",
+   "input_b": "wuzzy fuzzy was a bear",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "ascii",
+   "input_a": "fuzzy wuzzy was a bear",
+   "input_b": "wuzzy fuzzy was a bear",
+   "function": "WRatio",
+   "expected_score": 95
+  },
+  {
+   "category": "ascii",
+   "input_a": "fuzzy wuzzy was a bear",
+   "input_b": "wuzzy fuzzy was a bear",
+   "function": "QRatio",
+   "expected_score": 91
+  },
+  {
+   "category": "ascii",
+   "input_a": "mysmilarstring",
+   "input_b": "myawfullysimilarstirng",
+   "function": "ratio",
+   "expected_score": 72
+  },
+  {
+   "category": "ascii",
+   "input_a": "mysmilarstring",
+   "input_b": "myawfullysimilarstirng",
+   "function": "partial_ratio",
+   "expected_score": 86
+  },
+  {
+   "category": "ascii",
+   "input_a": "mysmilarstring",
+   "input_b": "myawfullysimilarstirng",
+   "function": "token_sort_ratio",
+   "expected_score": 72
+  },
+  {
+   "category": "ascii",
+   "input_a": "mysmilarstring",
+   "input_b": "myawfullysimilarstirng",
+   "function": "token_set_ratio",
+   "expected_score": 72
+  },
+  {
+   "category": "ascii",
+   "input_a": "mysmilarstring",
+   "input_b": "myawfullysimilarstirng",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 86
+  },
+  {
+   "category": "ascii",
+   "input_a": "mysmilarstring",
+   "input_b": "myawfullysimilarstirng",
+   "function": "partial_token_set_ratio",
+   "expected_score": 86
+  },
+  {
+   "category": "ascii",
+   "input_a": "mysmilarstring",
+   "input_b": "myawfullysimilarstirng",
+   "function": "WRatio",
+   "expected_score": 77
+  },
+  {
+   "category": "ascii",
+   "input_a": "mysmilarstring",
+   "input_b": "myawfullysimilarstirng",
+   "function": "QRatio",
+   "expected_score": 72
+  },
+  {
+   "category": "ascii",
+   "input_a": "abcd",
+   "input_b": "XYZ",
+   "function": "ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "ascii",
+   "input_a": "abcd",
+   "input_b": "XYZ",
+   "function": "partial_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "ascii",
+   "input_a": "abcd",
+   "input_b": "XYZ",
+   "function": "token_sort_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "ascii",
+   "input_a": "abcd",
+   "input_b": "XYZ",
+   "function": "token_set_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "ascii",
+   "input_a": "abcd",
+   "input_b": "XYZ",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "ascii",
+   "input_a": "abcd",
+   "input_b": "XYZ",
+   "function": "partial_token_set_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "ascii",
+   "input_a": "abcd",
+   "input_b": "XYZ",
+   "function": "WRatio",
+   "expected_score": 0
+  },
+  {
+   "category": "ascii",
+   "input_a": "abcd",
+   "input_b": "XYZ",
+   "function": "QRatio",
+   "expected_score": 0
+  },
+  {
+   "category": "identical",
+   "input_a": "identical",
+   "input_b": "identical",
+   "function": "ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "identical",
+   "input_a": "identical",
+   "input_b": "identical",
+   "function": "partial_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "identical",
+   "input_a": "identical",
+   "input_b": "identical",
+   "function": "token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "identical",
+   "input_a": "identical",
+   "input_b": "identical",
+   "function": "token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "identical",
+   "input_a": "identical",
+   "input_b": "identical",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "identical",
+   "input_a": "identical",
+   "input_b": "identical",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "identical",
+   "input_a": "identical",
+   "input_b": "identical",
+   "function": "WRatio",
+   "expected_score": 100
+  },
+  {
+   "category": "identical",
+   "input_a": "identical",
+   "input_b": "identical",
+   "function": "QRatio",
+   "expected_score": 100
+  },
+  {
+   "category": "identical",
+   "input_a": "a",
+   "input_b": "a",
+   "function": "ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "identical",
+   "input_a": "a",
+   "input_b": "a",
+   "function": "partial_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "identical",
+   "input_a": "a",
+   "input_b": "a",
+   "function": "token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "identical",
+   "input_a": "a",
+   "input_b": "a",
+   "function": "token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "identical",
+   "input_a": "a",
+   "input_b": "a",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "identical",
+   "input_a": "a",
+   "input_b": "a",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "identical",
+   "input_a": "a",
+   "input_b": "a",
+   "function": "WRatio",
+   "expected_score": 100
+  },
+  {
+   "category": "identical",
+   "input_a": "a",
+   "input_b": "a",
+   "function": "QRatio",
+   "expected_score": 100
+  },
+  {
+   "category": "empty",
+   "input_a": "",
+   "input_b": "",
+   "function": "ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "empty",
+   "input_a": "",
+   "input_b": "",
+   "function": "partial_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "empty",
+   "input_a": "",
+   "input_b": "",
+   "function": "token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "empty",
+   "input_a": "",
+   "input_b": "",
+   "function": "token_set_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "empty",
+   "input_a": "",
+   "input_b": "",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "empty",
+   "input_a": "",
+   "input_b": "",
+   "function": "partial_token_set_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "empty",
+   "input_a": "",
+   "input_b": "",
+   "function": "WRatio",
+   "expected_score": 0
+  },
+  {
+   "category": "empty",
+   "input_a": "",
+   "input_b": "",
+   "function": "QRatio",
+   "expected_score": 0
+  },
+  {
+   "category": "empty",
+   "input_a": "",
+   "input_b": "nonempty",
+   "function": "ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "empty",
+   "input_a": "",
+   "input_b": "nonempty",
+   "function": "partial_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "empty",
+   "input_a": "",
+   "input_b": "nonempty",
+   "function": "token_sort_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "empty",
+   "input_a": "",
+   "input_b": "nonempty",
+   "function": "token_set_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "empty",
+   "input_a": "",
+   "input_b": "nonempty",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "empty",
+   "input_a": "",
+   "input_b": "nonempty",
+   "function": "partial_token_set_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "empty",
+   "input_a": "",
+   "input_b": "nonempty",
+   "function": "WRatio",
+   "expected_score": 0
+  },
+  {
+   "category": "empty",
+   "input_a": "",
+   "input_b": "nonempty",
+   "function": "QRatio",
+   "expected_score": 0
+  },
+  {
+   "category": "empty",
+   "input_a": "some text",
+   "input_b": "",
+   "function": "ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "empty",
+   "input_a": "some text",
+   "input_b": "",
+   "function": "partial_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "empty",
+   "input_a": "some text",
+   "input_b": "",
+   "function": "token_sort_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "empty",
+   "input_a": "some text",
+   "input_b": "",
+   "function": "token_set_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "empty",
+   "input_a": "some text",
+   "input_b": "",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "empty",
+   "input_a": "some text",
+   "input_b": "",
+   "function": "partial_token_set_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "empty",
+   "input_a": "some text",
+   "input_b": "",
+   "function": "WRatio",
+   "expected_score": 0
+  },
+  {
+   "category": "empty",
+   "input_a": "some text",
+   "input_b": "",
+   "function": "QRatio",
+   "expected_score": 0
+  },
+  {
+   "category": "empty",
+   "input_a": "   ",
+   "input_b": "punct!!!",
+   "function": "ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "empty",
+   "input_a": "   ",
+   "input_b": "punct!!!",
+   "function": "partial_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "empty",
+   "input_a": "   ",
+   "input_b": "punct!!!",
+   "function": "token_sort_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "empty",
+   "input_a": "   ",
+   "input_b": "punct!!!",
+   "function": "token_set_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "empty",
+   "input_a": "   ",
+   "input_b": "punct!!!",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "empty",
+   "input_a": "   ",
+   "input_b": "punct!!!",
+   "function": "partial_token_set_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "empty",
+   "input_a": "   ",
+   "input_b": "punct!!!",
+   "function": "WRatio",
+   "expected_score": 0
+  },
+  {
+   "category": "empty",
+   "input_a": "   ",
+   "input_b": "punct!!!",
+   "function": "QRatio",
+   "expected_score": 0
+  },
+  {
+   "category": "disjoint",
+   "input_a": "qwrt",
+   "input_b": "zxcv",
+   "function": "ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "disjoint",
+   "input_a": "qwrt",
+   "input_b": "zxcv",
+   "function": "partial_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "disjoint",
+   "input_a": "qwrt",
+   "input_b": "zxcv",
+   "function": "token_sort_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "disjoint",
+   "input_a": "qwrt",
+   "input_b": "zxcv",
+   "function": "token_set_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "disjoint",
+   "input_a": "qwrt",
+   "input_b": "zxcv",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "disjoint",
+   "input_a": "qwrt",
+   "input_b": "zxcv",
+   "function": "partial_token_set_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "disjoint",
+   "input_a": "qwrt",
+   "input_b": "zxcv",
+   "function": "WRatio",
+   "expected_score": 0
+  },
+  {
+   "category": "disjoint",
+   "input_a": "qwrt",
+   "input_b": "zxcv",
+   "function": "QRatio",
+   "expected_score": 0
+  },
+  {
+   "category": "disjoint",
+   "input_a": "one two three",
+   "input_b": "four five six",
+   "function": "ratio",
+   "expected_score": 23
+  },
+  {
+   "category": "disjoint",
+   "input_a": "one two three",
+   "input_b": "four five six",
+   "function": "partial_ratio",
+   "expected_score": 35
+  },
+  {
+   "category": "disjoint",
+   "input_a": "one two three",
+   "input_b": "four five six",
+   "function": "token_sort_ratio",
+   "expected_score": 31
+  },
+  {
+   "category": "disjoint",
+   "input_a": "one two three",
+   "input_b": "four five six",
+   "function": "token_set_ratio",
+   "expected_score": 31
+  },
+  {
+   "category": "disjoint",
+   "input_a": "one two three",
+   "input_b": "four five six",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 35
+  },
+  {
+   "category": "disjoint",
+   "input_a": "one two three",
+   "input_b": "four five six",
+   "function": "partial_token_set_ratio",
+   "expected_score": 35
+  },
+  {
+   "category": "disjoint",
+   "input_a": "one two three",
+   "input_b": "four five six",
+   "function": "WRatio",
+   "expected_score": 29
+  },
+  {
+   "category": "disjoint",
+   "input_a": "one two three",
+   "input_b": "four five six",
+   "function": "QRatio",
+   "expected_score": 23
+  },
+  {
+   "category": "substring",
+   "input_a": "test",
+   "input_b": "this is a test",
+   "function": "ratio",
+   "expected_score": 44
+  },
+  {
+   "category": "substring",
+   "input_a": "test",
+   "input_b": "this is a test",
+   "function": "partial_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "substring",
+   "input_a": "test",
+   "input_b": "this is a test",
+   "function": "token_sort_ratio",
+   "expected_score": 44
+  },
+  {
+   "category": "substring",
+   "input_a": "test",
+   "input_b": "this is a test",
+   "function": "token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "substring",
+   "input_a": "test",
+   "input_b": "this is a test",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "substring",
+   "input_a": "test",
+   "input_b": "this is a test",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "substring",
+   "input_a": "test",
+   "input_b": "this is a test",
+   "function": "WRatio",
+   "expected_score": 90
+  },
+  {
+   "category": "substring",
+   "input_a": "test",
+   "input_b": "this is a test",
+   "function": "QRatio",
+   "expected_score": 44
+  },
+  {
+   "category": "substring",
+   "input_a": "york",
+   "input_b": "new york city",
+   "function": "ratio",
+   "expected_score": 47
+  },
+  {
+   "category": "substring",
+   "input_a": "york",
+   "input_b": "new york city",
+   "function": "partial_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "substring",
+   "input_a": "york",
+   "input_b": "new york city",
+   "function": "token_sort_ratio",
+   "expected_score": 47
+  },
+  {
+   "category": "substring",
+   "input_a": "york",
+   "input_b": "new york city",
+   "function": "token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "substring",
+   "input_a": "york",
+   "input_b": "new york city",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "substring",
+   "input_a": "york",
+   "input_b": "new york city",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "substring",
+   "input_a": "york",
+   "input_b": "new york city",
+   "function": "WRatio",
+   "expected_score": 90
+  },
+  {
+   "category": "substring",
+   "input_a": "york",
+   "input_b": "new york city",
+   "function": "QRatio",
+   "expected_score": 47
+  },
+  {
+   "category": "substring",
+   "input_a": "similar",
+   "input_b": "somewhat similar-ish",
+   "function": "ratio",
+   "expected_score": 52
+  },
+  {
+   "category": "substring",
+   "input_a": "similar",
+   "input_b": "somewhat similar-ish",
+   "function": "partial_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "substring",
+   "input_a": "similar",
+   "input_b": "somewhat similar-ish",
+   "function": "token_sort_ratio",
+   "expected_score": 52
+  },
+  {
+   "category": "substring",
+   "input_a": "similar",
+   "input_b": "somewhat similar-ish",
+   "function": "token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "substring",
+   "input_a": "similar",
+   "input_b": "somewhat similar-ish",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "substring",
+   "input_a": "similar",
+   "input_b": "somewhat similar-ish",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "substring",
+   "input_a": "similar",
+   "input_b": "somewhat similar-ish",
+   "function": "WRatio",
+   "expected_score": 90
+  },
+  {
+   "category": "substring",
+   "input_a": "similar",
+   "input_b": "somewhat similar-ish",
+   "function": "QRatio",
+   "expected_score": 52
+  },
+  {
+   "category": "token_reorder",
+   "input_a": "great is scala",
+   "input_b": "java is great",
+   "function": "ratio",
+   "expected_score": 44
+  },
+  {
+   "category": "token_reorder",
+   "input_a": "great is scala",
+   "input_b": "java is great",
+   "function": "partial_ratio",
+   "expected_score": 56
+  },
+  {
+   "category": "token_reorder",
+   "input_a": "great is scala",
+   "input_b": "java is great",
+   "function": "token_sort_ratio",
+   "expected_score": 81
+  },
+  {
+   "category": "token_reorder",
+   "input_a": "great is scala",
+   "input_b": "java is great",
+   "function": "token_set_ratio",
+   "expected_score": 81
+  },
+  {
+   "category": "token_reorder",
+   "input_a": "great is scala",
+   "input_b": "java is great",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 82
+  },
+  {
+   "category": "token_reorder",
+   "input_a": "great is scala",
+   "input_b": "java is great",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "token_reorder",
+   "input_a": "great is scala",
+   "input_b": "java is great",
+   "function": "WRatio",
+   "expected_score": 77
+  },
+  {
+   "category": "token_reorder",
+   "input_a": "great is scala",
+   "input_b": "java is great",
+   "function": "QRatio",
+   "expected_score": 44
+  },
+  {
+   "category": "token_reorder",
+   "input_a": "world hello",
+   "input_b": "hello world",
+   "function": "ratio",
+   "expected_score": 45
+  },
+  {
+   "category": "token_reorder",
+   "input_a": "world hello",
+   "input_b": "hello world",
+   "function": "partial_ratio",
+   "expected_score": 62
+  },
+  {
+   "category": "token_reorder",
+   "input_a": "world hello",
+   "input_b": "hello world",
+   "function": "token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "token_reorder",
+   "input_a": "world hello",
+   "input_b": "hello world",
+   "function": "token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "token_reorder",
+   "input_a": "world hello",
+   "input_b": "hello world",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "token_reorder",
+   "input_a": "world hello",
+   "input_b": "hello world",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "token_reorder",
+   "input_a": "world hello",
+   "input_b": "hello world",
+   "function": "WRatio",
+   "expected_score": 95
+  },
+  {
+   "category": "token_reorder",
+   "input_a": "world hello",
+   "input_b": "hello world",
+   "function": "QRatio",
+   "expected_score": 45
+  },
+  {
+   "category": "token_reorder",
+   "input_a": "b a c d",
+   "input_b": "d c b a",
+   "function": "ratio",
+   "expected_score": 43
+  },
+  {
+   "category": "token_reorder",
+   "input_a": "b a c d",
+   "input_b": "d c b a",
+   "function": "partial_ratio",
+   "expected_score": 60
+  },
+  {
+   "category": "token_reorder",
+   "input_a": "b a c d",
+   "input_b": "d c b a",
+   "function": "token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "token_reorder",
+   "input_a": "b a c d",
+   "input_b": "d c b a",
+   "function": "token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "token_reorder",
+   "input_a": "b a c d",
+   "input_b": "d c b a",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "token_reorder",
+   "input_a": "b a c d",
+   "input_b": "d c b a",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "token_reorder",
+   "input_a": "b a c d",
+   "input_b": "d c b a",
+   "function": "WRatio",
+   "expected_score": 95
+  },
+  {
+   "category": "token_reorder",
+   "input_a": "b a c d",
+   "input_b": "d c b a",
+   "function": "QRatio",
+   "expected_score": 43
+  },
+  {
+   "category": "dup_token",
+   "input_a": "fuzzy fuzzy fuzzy bear",
+   "input_b": "fuzzy bear",
+   "function": "ratio",
+   "expected_score": 62
+  },
+  {
+   "category": "dup_token",
+   "input_a": "fuzzy fuzzy fuzzy bear",
+   "input_b": "fuzzy bear",
+   "function": "partial_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "dup_token",
+   "input_a": "fuzzy fuzzy fuzzy bear",
+   "input_b": "fuzzy bear",
+   "function": "token_sort_ratio",
+   "expected_score": 62
+  },
+  {
+   "category": "dup_token",
+   "input_a": "fuzzy fuzzy fuzzy bear",
+   "input_b": "fuzzy bear",
+   "function": "token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "dup_token",
+   "input_a": "fuzzy fuzzy fuzzy bear",
+   "input_b": "fuzzy bear",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "dup_token",
+   "input_a": "fuzzy fuzzy fuzzy bear",
+   "input_b": "fuzzy bear",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "dup_token",
+   "input_a": "fuzzy fuzzy fuzzy bear",
+   "input_b": "fuzzy bear",
+   "function": "WRatio",
+   "expected_score": 90
+  },
+  {
+   "category": "dup_token",
+   "input_a": "fuzzy fuzzy fuzzy bear",
+   "input_b": "fuzzy bear",
+   "function": "QRatio",
+   "expected_score": 62
+  },
+  {
+   "category": "dup_token",
+   "input_a": "the the the cat",
+   "input_b": "the cat sat",
+   "function": "ratio",
+   "expected_score": 62
+  },
+  {
+   "category": "dup_token",
+   "input_a": "the the the cat",
+   "input_b": "the cat sat",
+   "function": "partial_ratio",
+   "expected_score": 78
+  },
+  {
+   "category": "dup_token",
+   "input_a": "the the the cat",
+   "input_b": "the cat sat",
+   "function": "token_sort_ratio",
+   "expected_score": 69
+  },
+  {
+   "category": "dup_token",
+   "input_a": "the the the cat",
+   "input_b": "the cat sat",
+   "function": "token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "dup_token",
+   "input_a": "the the the cat",
+   "input_b": "the cat sat",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 82
+  },
+  {
+   "category": "dup_token",
+   "input_a": "the the the cat",
+   "input_b": "the cat sat",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "dup_token",
+   "input_a": "the the the cat",
+   "input_b": "the cat sat",
+   "function": "WRatio",
+   "expected_score": 95
+  },
+  {
+   "category": "dup_token",
+   "input_a": "the the the cat",
+   "input_b": "the cat sat",
+   "function": "QRatio",
+   "expected_score": 62
+  },
+  {
+   "category": "token_set",
+   "input_a": "fuzzy was a bear",
+   "input_b": "fuzzy fuzzy was a bear",
+   "function": "ratio",
+   "expected_score": 84
+  },
+  {
+   "category": "token_set",
+   "input_a": "fuzzy was a bear",
+   "input_b": "fuzzy fuzzy was a bear",
+   "function": "partial_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "token_set",
+   "input_a": "fuzzy was a bear",
+   "input_b": "fuzzy fuzzy was a bear",
+   "function": "token_sort_ratio",
+   "expected_score": 84
+  },
+  {
+   "category": "token_set",
+   "input_a": "fuzzy was a bear",
+   "input_b": "fuzzy fuzzy was a bear",
+   "function": "token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "token_set",
+   "input_a": "fuzzy was a bear",
+   "input_b": "fuzzy fuzzy was a bear",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 90
+  },
+  {
+   "category": "token_set",
+   "input_a": "fuzzy was a bear",
+   "input_b": "fuzzy fuzzy was a bear",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "token_set",
+   "input_a": "fuzzy was a bear",
+   "input_b": "fuzzy fuzzy was a bear",
+   "function": "WRatio",
+   "expected_score": 95
+  },
+  {
+   "category": "token_set",
+   "input_a": "fuzzy was a bear",
+   "input_b": "fuzzy fuzzy was a bear",
+   "function": "QRatio",
+   "expected_score": 84
+  },
+  {
+   "category": "token_set",
+   "input_a": "new york mets vs atlanta braves",
+   "input_b": "atlanta braves vs new york mets",
+   "function": "ratio",
+   "expected_score": 45
+  },
+  {
+   "category": "token_set",
+   "input_a": "new york mets vs atlanta braves",
+   "input_b": "atlanta braves vs new york mets",
+   "function": "partial_ratio",
+   "expected_score": 62
+  },
+  {
+   "category": "token_set",
+   "input_a": "new york mets vs atlanta braves",
+   "input_b": "atlanta braves vs new york mets",
+   "function": "token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "token_set",
+   "input_a": "new york mets vs atlanta braves",
+   "input_b": "atlanta braves vs new york mets",
+   "function": "token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "token_set",
+   "input_a": "new york mets vs atlanta braves",
+   "input_b": "atlanta braves vs new york mets",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "token_set",
+   "input_a": "new york mets vs atlanta braves",
+   "input_b": "atlanta braves vs new york mets",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "token_set",
+   "input_a": "new york mets vs atlanta braves",
+   "input_b": "atlanta braves vs new york mets",
+   "function": "WRatio",
+   "expected_score": 95
+  },
+  {
+   "category": "token_set",
+   "input_a": "new york mets vs atlanta braves",
+   "input_b": "atlanta braves vs new york mets",
+   "function": "QRatio",
+   "expected_score": 45
+  },
+  {
+   "category": "token_set",
+   "input_a": "chicago cubs vs new york mets",
+   "input_b": "new york city mets - chicago cubs",
+   "function": "ratio",
+   "expected_score": 42
+  },
+  {
+   "category": "token_set",
+   "input_a": "chicago cubs vs new york mets",
+   "input_b": "new york city mets - chicago cubs",
+   "function": "partial_ratio",
+   "expected_score": 59
+  },
+  {
+   "category": "token_set",
+   "input_a": "chicago cubs vs new york mets",
+   "input_b": "new york city mets - chicago cubs",
+   "function": "token_sort_ratio",
+   "expected_score": 87
+  },
+  {
+   "category": "token_set",
+   "input_a": "chicago cubs vs new york mets",
+   "input_b": "new york city mets - chicago cubs",
+   "function": "token_set_ratio",
+   "expected_score": 95
+  },
+  {
+   "category": "token_set",
+   "input_a": "chicago cubs vs new york mets",
+   "input_b": "new york city mets - chicago cubs",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 83
+  },
+  {
+   "category": "token_set",
+   "input_a": "chicago cubs vs new york mets",
+   "input_b": "new york city mets - chicago cubs",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "token_set",
+   "input_a": "chicago cubs vs new york mets",
+   "input_b": "new york city mets - chicago cubs",
+   "function": "WRatio",
+   "expected_score": 90
+  },
+  {
+   "category": "token_set",
+   "input_a": "chicago cubs vs new york mets",
+   "input_b": "new york city mets - chicago cubs",
+   "function": "QRatio",
+   "expected_score": 42
+  },
+  {
+   "category": "len_asym",
+   "input_a": "ab",
+   "input_b": "abcd",
+   "function": "ratio",
+   "expected_score": 67
+  },
+  {
+   "category": "len_asym",
+   "input_a": "ab",
+   "input_b": "abcd",
+   "function": "partial_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "len_asym",
+   "input_a": "ab",
+   "input_b": "abcd",
+   "function": "token_sort_ratio",
+   "expected_score": 67
+  },
+  {
+   "category": "len_asym",
+   "input_a": "ab",
+   "input_b": "abcd",
+   "function": "token_set_ratio",
+   "expected_score": 67
+  },
+  {
+   "category": "len_asym",
+   "input_a": "ab",
+   "input_b": "abcd",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "len_asym",
+   "input_a": "ab",
+   "input_b": "abcd",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "len_asym",
+   "input_a": "ab",
+   "input_b": "abcd",
+   "function": "WRatio",
+   "expected_score": 90
+  },
+  {
+   "category": "len_asym",
+   "input_a": "ab",
+   "input_b": "abcd",
+   "function": "QRatio",
+   "expected_score": 67
+  },
+  {
+   "category": "len_asym",
+   "input_a": "abc",
+   "input_b": "abcdefghijklmnopqrstuvwxyz0",
+   "function": "ratio",
+   "expected_score": 20
+  },
+  {
+   "category": "len_asym",
+   "input_a": "abc",
+   "input_b": "abcdefghijklmnopqrstuvwxyz0",
+   "function": "partial_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "len_asym",
+   "input_a": "abc",
+   "input_b": "abcdefghijklmnopqrstuvwxyz0",
+   "function": "token_sort_ratio",
+   "expected_score": 20
+  },
+  {
+   "category": "len_asym",
+   "input_a": "abc",
+   "input_b": "abcdefghijklmnopqrstuvwxyz0",
+   "function": "token_set_ratio",
+   "expected_score": 20
+  },
+  {
+   "category": "len_asym",
+   "input_a": "abc",
+   "input_b": "abcdefghijklmnopqrstuvwxyz0",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "len_asym",
+   "input_a": "abc",
+   "input_b": "abcdefghijklmnopqrstuvwxyz0",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "len_asym",
+   "input_a": "abc",
+   "input_b": "abcdefghijklmnopqrstuvwxyz0",
+   "function": "WRatio",
+   "expected_score": 60
+  },
+  {
+   "category": "len_asym",
+   "input_a": "abc",
+   "input_b": "abcdefghijklmnopqrstuvwxyz0",
+   "function": "QRatio",
+   "expected_score": 20
+  },
+  {
+   "category": "len_asym",
+   "input_a": "test",
+   "input_b": "this is a somewhat longer test sentence with many words",
+   "function": "ratio",
+   "expected_score": 14
+  },
+  {
+   "category": "len_asym",
+   "input_a": "test",
+   "input_b": "this is a somewhat longer test sentence with many words",
+   "function": "partial_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "len_asym",
+   "input_a": "test",
+   "input_b": "this is a somewhat longer test sentence with many words",
+   "function": "token_sort_ratio",
+   "expected_score": 14
+  },
+  {
+   "category": "len_asym",
+   "input_a": "test",
+   "input_b": "this is a somewhat longer test sentence with many words",
+   "function": "token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "len_asym",
+   "input_a": "test",
+   "input_b": "this is a somewhat longer test sentence with many words",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "len_asym",
+   "input_a": "test",
+   "input_b": "this is a somewhat longer test sentence with many words",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "len_asym",
+   "input_a": "test",
+   "input_b": "this is a somewhat longer test sentence with many words",
+   "function": "WRatio",
+   "expected_score": 60
+  },
+  {
+   "category": "len_asym",
+   "input_a": "test",
+   "input_b": "this is a somewhat longer test sentence with many words",
+   "function": "QRatio",
+   "expected_score": 14
+  },
+  {
+   "category": "len_asym",
+   "input_a": "x",
+   "input_b": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+   "function": "ratio",
+   "expected_score": 6
+  },
+  {
+   "category": "len_asym",
+   "input_a": "x",
+   "input_b": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+   "function": "partial_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "len_asym",
+   "input_a": "x",
+   "input_b": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+   "function": "token_sort_ratio",
+   "expected_score": 6
+  },
+  {
+   "category": "len_asym",
+   "input_a": "x",
+   "input_b": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+   "function": "token_set_ratio",
+   "expected_score": 6
+  },
+  {
+   "category": "len_asym",
+   "input_a": "x",
+   "input_b": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "len_asym",
+   "input_a": "x",
+   "input_b": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "len_asym",
+   "input_a": "x",
+   "input_b": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+   "function": "WRatio",
+   "expected_score": 60
+  },
+  {
+   "category": "len_asym",
+   "input_a": "x",
+   "input_b": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+   "function": "QRatio",
+   "expected_score": 6
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "café",
+   "input_b": "cafe",
+   "function": "ratio",
+   "expected_score": 75
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "café",
+   "input_b": "cafe",
+   "function": "partial_ratio",
+   "expected_score": 86
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "café",
+   "input_b": "cafe",
+   "function": "token_sort_ratio",
+   "expected_score": 86
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "café",
+   "input_b": "cafe",
+   "function": "token_set_ratio",
+   "expected_score": 86
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "café",
+   "input_b": "cafe",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "café",
+   "input_b": "cafe",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "café",
+   "input_b": "cafe",
+   "function": "WRatio",
+   "expected_score": 86
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "café",
+   "input_b": "cafe",
+   "function": "QRatio",
+   "expected_score": 86
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "café",
+   "input_b": "cafe",
+   "function": "UWRatio",
+   "expected_score": 75
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "café",
+   "input_b": "cafe",
+   "function": "UQRatio",
+   "expected_score": 75
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "café",
+   "input_b": "cafe",
+   "function": "token_sort_ratio(force_ascii=False)",
+   "expected_score": 75
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "café",
+   "input_b": "cafe",
+   "function": "token_set_ratio(force_ascii=False)",
+   "expected_score": 75
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "über cool",
+   "input_b": "uber cool",
+   "function": "ratio",
+   "expected_score": 89
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "über cool",
+   "input_b": "uber cool",
+   "function": "partial_ratio",
+   "expected_score": 94
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "über cool",
+   "input_b": "uber cool",
+   "function": "token_sort_ratio",
+   "expected_score": 47
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "über cool",
+   "input_b": "uber cool",
+   "function": "token_set_ratio",
+   "expected_score": 94
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "über cool",
+   "input_b": "uber cool",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 67
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "über cool",
+   "input_b": "uber cool",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "über cool",
+   "input_b": "uber cool",
+   "function": "WRatio",
+   "expected_score": 94
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "über cool",
+   "input_b": "uber cool",
+   "function": "QRatio",
+   "expected_score": 94
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "über cool",
+   "input_b": "uber cool",
+   "function": "UWRatio",
+   "expected_score": 89
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "über cool",
+   "input_b": "uber cool",
+   "function": "UQRatio",
+   "expected_score": 89
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "über cool",
+   "input_b": "uber cool",
+   "function": "token_sort_ratio(force_ascii=False)",
+   "expected_score": 89
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "über cool",
+   "input_b": "uber cool",
+   "function": "token_set_ratio(force_ascii=False)",
+   "expected_score": 89
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "naïve",
+   "input_b": "naïve",
+   "function": "ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "naïve",
+   "input_b": "naïve",
+   "function": "partial_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "naïve",
+   "input_b": "naïve",
+   "function": "token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "naïve",
+   "input_b": "naïve",
+   "function": "token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "naïve",
+   "input_b": "naïve",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "naïve",
+   "input_b": "naïve",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "naïve",
+   "input_b": "naïve",
+   "function": "WRatio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "naïve",
+   "input_b": "naïve",
+   "function": "QRatio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "naïve",
+   "input_b": "naïve",
+   "function": "UWRatio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "naïve",
+   "input_b": "naïve",
+   "function": "UQRatio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "naïve",
+   "input_b": "naïve",
+   "function": "token_sort_ratio(force_ascii=False)",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "naïve",
+   "input_b": "naïve",
+   "function": "token_set_ratio(force_ascii=False)",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "Ähnlichkeit",
+   "input_b": "ähnlichkeit!",
+   "function": "ratio",
+   "expected_score": 87
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "Ähnlichkeit",
+   "input_b": "ähnlichkeit!",
+   "function": "partial_ratio",
+   "expected_score": 91
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "Ähnlichkeit",
+   "input_b": "ähnlichkeit!",
+   "function": "token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "Ähnlichkeit",
+   "input_b": "ähnlichkeit!",
+   "function": "token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "Ähnlichkeit",
+   "input_b": "ähnlichkeit!",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "Ähnlichkeit",
+   "input_b": "ähnlichkeit!",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "Ähnlichkeit",
+   "input_b": "ähnlichkeit!",
+   "function": "WRatio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "Ähnlichkeit",
+   "input_b": "ähnlichkeit!",
+   "function": "QRatio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "Ähnlichkeit",
+   "input_b": "ähnlichkeit!",
+   "function": "UWRatio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "Ähnlichkeit",
+   "input_b": "ähnlichkeit!",
+   "function": "UQRatio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "Ähnlichkeit",
+   "input_b": "ähnlichkeit!",
+   "function": "token_sort_ratio(force_ascii=False)",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_accent",
+   "input_a": "Ähnlichkeit",
+   "input_b": "ähnlichkeit!",
+   "function": "token_set_ratio(force_ascii=False)",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "こんにちは世界",
+   "input_b": "こんにちは",
+   "function": "ratio",
+   "expected_score": 83
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "こんにちは世界",
+   "input_b": "こんにちは",
+   "function": "partial_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "こんにちは世界",
+   "input_b": "こんにちは",
+   "function": "token_sort_ratio",
+   "expected_score": 83
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "こんにちは世界",
+   "input_b": "こんにちは",
+   "function": "token_set_ratio",
+   "expected_score": 83
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "こんにちは世界",
+   "input_b": "こんにちは",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "こんにちは世界",
+   "input_b": "こんにちは",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "こんにちは世界",
+   "input_b": "こんにちは",
+   "function": "WRatio",
+   "expected_score": 83
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "こんにちは世界",
+   "input_b": "こんにちは",
+   "function": "QRatio",
+   "expected_score": 83
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "こんにちは世界",
+   "input_b": "こんにちは",
+   "function": "UWRatio",
+   "expected_score": 83
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "こんにちは世界",
+   "input_b": "こんにちは",
+   "function": "UQRatio",
+   "expected_score": 83
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "こんにちは世界",
+   "input_b": "こんにちは",
+   "function": "token_sort_ratio(force_ascii=False)",
+   "expected_score": 83
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "こんにちは世界",
+   "input_b": "こんにちは",
+   "function": "token_set_ratio(force_ascii=False)",
+   "expected_score": 83
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "北京烤鸭",
+   "input_b": "北京烤鸭店",
+   "function": "ratio",
+   "expected_score": 89
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "北京烤鸭",
+   "input_b": "北京烤鸭店",
+   "function": "partial_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "北京烤鸭",
+   "input_b": "北京烤鸭店",
+   "function": "token_sort_ratio",
+   "expected_score": 89
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "北京烤鸭",
+   "input_b": "北京烤鸭店",
+   "function": "token_set_ratio",
+   "expected_score": 89
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "北京烤鸭",
+   "input_b": "北京烤鸭店",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "北京烤鸭",
+   "input_b": "北京烤鸭店",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "北京烤鸭",
+   "input_b": "北京烤鸭店",
+   "function": "WRatio",
+   "expected_score": 89
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "北京烤鸭",
+   "input_b": "北京烤鸭店",
+   "function": "QRatio",
+   "expected_score": 89
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "北京烤鸭",
+   "input_b": "北京烤鸭店",
+   "function": "UWRatio",
+   "expected_score": 89
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "北京烤鸭",
+   "input_b": "北京烤鸭店",
+   "function": "UQRatio",
+   "expected_score": 89
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "北京烤鸭",
+   "input_b": "北京烤鸭店",
+   "function": "token_sort_ratio(force_ascii=False)",
+   "expected_score": 89
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "北京烤鸭",
+   "input_b": "北京烤鸭店",
+   "function": "token_set_ratio(force_ascii=False)",
+   "expected_score": 89
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "서울특별시",
+   "input_b": "서울시",
+   "function": "ratio",
+   "expected_score": 75
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "서울특별시",
+   "input_b": "서울시",
+   "function": "partial_ratio",
+   "expected_score": 80
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "서울특별시",
+   "input_b": "서울시",
+   "function": "token_sort_ratio",
+   "expected_score": 75
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "서울특별시",
+   "input_b": "서울시",
+   "function": "token_set_ratio",
+   "expected_score": 75
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "서울특별시",
+   "input_b": "서울시",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 80
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "서울특별시",
+   "input_b": "서울시",
+   "function": "partial_token_set_ratio",
+   "expected_score": 80
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "서울특별시",
+   "input_b": "서울시",
+   "function": "WRatio",
+   "expected_score": 75
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "서울특별시",
+   "input_b": "서울시",
+   "function": "QRatio",
+   "expected_score": 75
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "서울특별시",
+   "input_b": "서울시",
+   "function": "UWRatio",
+   "expected_score": 75
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "서울특별시",
+   "input_b": "서울시",
+   "function": "UQRatio",
+   "expected_score": 75
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "서울특별시",
+   "input_b": "서울시",
+   "function": "token_sort_ratio(force_ascii=False)",
+   "expected_score": 75
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "서울특별시",
+   "input_b": "서울시",
+   "function": "token_set_ratio(force_ascii=False)",
+   "expected_score": 75
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "日本語のテスト",
+   "input_b": "テスト",
+   "function": "ratio",
+   "expected_score": 60
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "日本語のテスト",
+   "input_b": "テスト",
+   "function": "partial_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "日本語のテスト",
+   "input_b": "テスト",
+   "function": "token_sort_ratio",
+   "expected_score": 60
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "日本語のテスト",
+   "input_b": "テスト",
+   "function": "token_set_ratio",
+   "expected_score": 60
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "日本語のテスト",
+   "input_b": "テスト",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "日本語のテスト",
+   "input_b": "テスト",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "日本語のテスト",
+   "input_b": "テスト",
+   "function": "WRatio",
+   "expected_score": 90
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "日本語のテスト",
+   "input_b": "テスト",
+   "function": "QRatio",
+   "expected_score": 60
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "日本語のテスト",
+   "input_b": "テスト",
+   "function": "UWRatio",
+   "expected_score": 90
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "日本語のテスト",
+   "input_b": "テスト",
+   "function": "UQRatio",
+   "expected_score": 60
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "日本語のテスト",
+   "input_b": "テスト",
+   "function": "token_sort_ratio(force_ascii=False)",
+   "expected_score": 60
+  },
+  {
+   "category": "unicode_cjk",
+   "input_a": "日本語のテスト",
+   "input_b": "テスト",
+   "function": "token_set_ratio(force_ascii=False)",
+   "expected_score": 60
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "hello 👋 world",
+   "input_b": "hello world",
+   "function": "ratio",
+   "expected_score": 92
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "hello 👋 world",
+   "input_b": "hello world",
+   "function": "partial_ratio",
+   "expected_score": 82
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "hello 👋 world",
+   "input_b": "hello world",
+   "function": "token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "hello 👋 world",
+   "input_b": "hello world",
+   "function": "token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "hello 👋 world",
+   "input_b": "hello world",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "hello 👋 world",
+   "input_b": "hello world",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "hello 👋 world",
+   "input_b": "hello world",
+   "function": "WRatio",
+   "expected_score": 95
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "hello 👋 world",
+   "input_b": "hello world",
+   "function": "QRatio",
+   "expected_score": 92
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "hello 👋 world",
+   "input_b": "hello world",
+   "function": "UWRatio",
+   "expected_score": 95
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "hello 👋 world",
+   "input_b": "hello world",
+   "function": "UQRatio",
+   "expected_score": 92
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "hello 👋 world",
+   "input_b": "hello world",
+   "function": "token_sort_ratio(force_ascii=False)",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "hello 👋 world",
+   "input_b": "hello world",
+   "function": "token_set_ratio(force_ascii=False)",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "🦀🦀🦀",
+   "input_b": "🦀",
+   "function": "ratio",
+   "expected_score": 50
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "🦀🦀🦀",
+   "input_b": "🦀",
+   "function": "partial_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "🦀🦀🦀",
+   "input_b": "🦀",
+   "function": "token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "🦀🦀🦀",
+   "input_b": "🦀",
+   "function": "token_set_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "🦀🦀🦀",
+   "input_b": "🦀",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "🦀🦀🦀",
+   "input_b": "🦀",
+   "function": "partial_token_set_ratio",
+   "expected_score": 0
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "🦀🦀🦀",
+   "input_b": "🦀",
+   "function": "WRatio",
+   "expected_score": 0
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "🦀🦀🦀",
+   "input_b": "🦀",
+   "function": "QRatio",
+   "expected_score": 0
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "🦀🦀🦀",
+   "input_b": "🦀",
+   "function": "UWRatio",
+   "expected_score": 0
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "🦀🦀🦀",
+   "input_b": "🦀",
+   "function": "UQRatio",
+   "expected_score": 0
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "🦀🦀🦀",
+   "input_b": "🦀",
+   "function": "token_sort_ratio(force_ascii=False)",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "🦀🦀🦀",
+   "input_b": "🦀",
+   "function": "token_set_ratio(force_ascii=False)",
+   "expected_score": 0
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "rust 🦀 lang",
+   "input_b": "lang 🦀 rust",
+   "function": "ratio",
+   "expected_score": 36
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "rust 🦀 lang",
+   "input_b": "lang 🦀 rust",
+   "function": "partial_ratio",
+   "expected_score": 53
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "rust 🦀 lang",
+   "input_b": "lang 🦀 rust",
+   "function": "token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "rust 🦀 lang",
+   "input_b": "lang 🦀 rust",
+   "function": "token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "rust 🦀 lang",
+   "input_b": "lang 🦀 rust",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "rust 🦀 lang",
+   "input_b": "lang 🦀 rust",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "rust 🦀 lang",
+   "input_b": "lang 🦀 rust",
+   "function": "WRatio",
+   "expected_score": 95
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "rust 🦀 lang",
+   "input_b": "lang 🦀 rust",
+   "function": "QRatio",
+   "expected_score": 36
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "rust 🦀 lang",
+   "input_b": "lang 🦀 rust",
+   "function": "UWRatio",
+   "expected_score": 95
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "rust 🦀 lang",
+   "input_b": "lang 🦀 rust",
+   "function": "UQRatio",
+   "expected_score": 36
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "rust 🦀 lang",
+   "input_b": "lang 🦀 rust",
+   "function": "token_sort_ratio(force_ascii=False)",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_emoji",
+   "input_a": "rust 🦀 lang",
+   "input_b": "lang 🦀 rust",
+   "function": "token_set_ratio(force_ascii=False)",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "αβγδε",
+   "input_b": "abγδe",
+   "function": "ratio",
+   "expected_score": 40
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "αβγδε",
+   "input_b": "abγδe",
+   "function": "partial_ratio",
+   "expected_score": 50
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "αβγδε",
+   "input_b": "abγδe",
+   "function": "token_sort_ratio",
+   "expected_score": 40
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "αβγδε",
+   "input_b": "abγδe",
+   "function": "token_set_ratio",
+   "expected_score": 40
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "αβγδε",
+   "input_b": "abγδe",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 50
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "αβγδε",
+   "input_b": "abγδe",
+   "function": "partial_token_set_ratio",
+   "expected_score": 50
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "αβγδε",
+   "input_b": "abγδe",
+   "function": "WRatio",
+   "expected_score": 40
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "αβγδε",
+   "input_b": "abγδe",
+   "function": "QRatio",
+   "expected_score": 40
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "αβγδε",
+   "input_b": "abγδe",
+   "function": "UWRatio",
+   "expected_score": 40
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "αβγδε",
+   "input_b": "abγδe",
+   "function": "UQRatio",
+   "expected_score": 40
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "αβγδε",
+   "input_b": "abγδe",
+   "function": "token_sort_ratio(force_ascii=False)",
+   "expected_score": 40
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "αβγδε",
+   "input_b": "abγδe",
+   "function": "token_set_ratio(force_ascii=False)",
+   "expected_score": 40
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "Здравствуй мир",
+   "input_b": "мир Здравствуй",
+   "function": "ratio",
+   "expected_score": 71
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "Здравствуй мир",
+   "input_b": "мир Здравствуй",
+   "function": "partial_ratio",
+   "expected_score": 83
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "Здравствуй мир",
+   "input_b": "мир Здравствуй",
+   "function": "token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "Здравствуй мир",
+   "input_b": "мир Здравствуй",
+   "function": "token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "Здравствуй мир",
+   "input_b": "мир Здравствуй",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "Здравствуй мир",
+   "input_b": "мир Здравствуй",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "Здравствуй мир",
+   "input_b": "мир Здравствуй",
+   "function": "WRatio",
+   "expected_score": 95
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "Здравствуй мир",
+   "input_b": "мир Здравствуй",
+   "function": "QRatio",
+   "expected_score": 71
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "Здравствуй мир",
+   "input_b": "мир Здравствуй",
+   "function": "UWRatio",
+   "expected_score": 95
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "Здравствуй мир",
+   "input_b": "мир Здравствуй",
+   "function": "UQRatio",
+   "expected_score": 71
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "Здравствуй мир",
+   "input_b": "мир Здравствуй",
+   "function": "token_sort_ratio(force_ascii=False)",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "Здравствуй мир",
+   "input_b": "мир Здравствуй",
+   "function": "token_set_ratio(force_ascii=False)",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "éclair",
+   "input_b": "éclair",
+   "function": "ratio",
+   "expected_score": 77
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "éclair",
+   "input_b": "éclair",
+   "function": "partial_ratio",
+   "expected_score": 91
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "éclair",
+   "input_b": "éclair",
+   "function": "token_sort_ratio",
+   "expected_score": 83
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "éclair",
+   "input_b": "éclair",
+   "function": "token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "éclair",
+   "input_b": "éclair",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "éclair",
+   "input_b": "éclair",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "éclair",
+   "input_b": "éclair",
+   "function": "WRatio",
+   "expected_score": 95
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "éclair",
+   "input_b": "éclair",
+   "function": "QRatio",
+   "expected_score": 83
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "éclair",
+   "input_b": "éclair",
+   "function": "UWRatio",
+   "expected_score": 77
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "éclair",
+   "input_b": "éclair",
+   "function": "UQRatio",
+   "expected_score": 77
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "éclair",
+   "input_b": "éclair",
+   "function": "token_sort_ratio(force_ascii=False)",
+   "expected_score": 77
+  },
+  {
+   "category": "unicode_mixed",
+   "input_a": "éclair",
+   "input_b": "éclair",
+   "function": "token_set_ratio(force_ascii=False)",
+   "expected_score": 77
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "שָׁלוֹם",
+   "input_b": "שלום",
+   "function": "token_sort_ratio",
+   "expected_score": 60,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "hebrew_niqqud_word"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "שָׁלוֹם",
+   "input_b": "שלום",
+   "function": "token_set_ratio",
+   "expected_score": 60,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "hebrew_niqqud_word"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "שָׁלוֹם",
+   "input_b": "שלום",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 75,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "hebrew_niqqud_word"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "שָׁלוֹם",
+   "input_b": "שלום",
+   "function": "partial_token_set_ratio",
+   "expected_score": 75,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "hebrew_niqqud_word"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "שָׁלוֹם",
+   "input_b": "שלום",
+   "function": "WRatio",
+   "expected_score": 73,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "hebrew_niqqud_word"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "שָׁלוֹם",
+   "input_b": "שלום",
+   "function": "QRatio",
+   "expected_score": 73,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "hebrew_niqqud_word"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "שָׁלוֹם",
+   "input_b": "שלום",
+   "function": "UWRatio",
+   "expected_score": 73,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "hebrew_niqqud_word"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "שָׁלוֹם",
+   "input_b": "שלום",
+   "function": "UQRatio",
+   "expected_score": 73,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "hebrew_niqqud_word"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "שָׁלוֹם עֲלֵיכֶם",
+   "input_b": "שלום עליכם",
+   "function": "token_sort_ratio",
+   "expected_score": 48,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "hebrew_niqqud_phrase"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "שָׁלוֹם עֲלֵיכֶם",
+   "input_b": "שלום עליכם",
+   "function": "token_set_ratio",
+   "expected_score": 52,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "hebrew_niqqud_phrase"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "שָׁלוֹם עֲלֵיכֶם",
+   "input_b": "שלום עליכם",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 63,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "hebrew_niqqud_phrase"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "שָׁלוֹם עֲלֵיכֶם",
+   "input_b": "שלום עליכם",
+   "function": "partial_token_set_ratio",
+   "expected_score": 63,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "hebrew_niqqud_phrase"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "שָׁלוֹם עֲלֵיכֶם",
+   "input_b": "שלום עליכם",
+   "function": "WRatio",
+   "expected_score": 77,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "hebrew_niqqud_phrase"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "שָׁלוֹם עֲלֵיכֶם",
+   "input_b": "שלום עליכם",
+   "function": "QRatio",
+   "expected_score": 77,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "hebrew_niqqud_phrase"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "שָׁלוֹם עֲלֵיכֶם",
+   "input_b": "שלום עליכם",
+   "function": "UWRatio",
+   "expected_score": 77,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "hebrew_niqqud_phrase"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "שָׁלוֹם עֲלֵיכֶם",
+   "input_b": "שלום עליכם",
+   "function": "UQRatio",
+   "expected_score": 77,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "hebrew_niqqud_phrase"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "مُحَمَّدٌ",
+   "input_b": "محمد",
+   "function": "token_sort_ratio",
+   "expected_score": 36,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "arabic_harakat_word"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "مُحَمَّدٌ",
+   "input_b": "محمد",
+   "function": "token_set_ratio",
+   "expected_score": 44,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "arabic_harakat_word"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "مُحَمَّدٌ",
+   "input_b": "محمد",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 57,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "arabic_harakat_word"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "مُحَمَّدٌ",
+   "input_b": "محمد",
+   "function": "partial_token_set_ratio",
+   "expected_score": 57,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "arabic_harakat_word"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "مُحَمَّدٌ",
+   "input_b": "محمد",
+   "function": "WRatio",
+   "expected_score": 67,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "arabic_harakat_word"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "مُحَمَّدٌ",
+   "input_b": "محمد",
+   "function": "QRatio",
+   "expected_score": 67,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "arabic_harakat_word"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "مُحَمَّدٌ",
+   "input_b": "محمد",
+   "function": "UWRatio",
+   "expected_score": 67,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "arabic_harakat_word"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "مُحَمَّدٌ",
+   "input_b": "محمد",
+   "function": "UQRatio",
+   "expected_score": 67,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "arabic_harakat_word"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "اللُّغَةُ العَرَبِيَّةُ",
+   "input_b": "اللغة العربية",
+   "function": "token_sort_ratio",
+   "expected_score": 50,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "arabic_harakat_phrase"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "اللُّغَةُ العَرَبِيَّةُ",
+   "input_b": "اللغة العربية",
+   "function": "token_set_ratio",
+   "expected_score": 53,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "arabic_harakat_phrase"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "اللُّغَةُ العَرَبِيَّةُ",
+   "input_b": "اللغة العربية",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 70,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "arabic_harakat_phrase"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "اللُّغَةُ العَرَبِيَّةُ",
+   "input_b": "اللغة العربية",
+   "function": "partial_token_set_ratio",
+   "expected_score": 70,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "arabic_harakat_phrase"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "اللُّغَةُ العَرَبِيَّةُ",
+   "input_b": "اللغة العربية",
+   "function": "WRatio",
+   "expected_score": 74,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "arabic_harakat_phrase"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "اللُّغَةُ العَرَبِيَّةُ",
+   "input_b": "اللغة العربية",
+   "function": "QRatio",
+   "expected_score": 74,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "arabic_harakat_phrase"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "اللُّغَةُ العَرَبِيَّةُ",
+   "input_b": "اللغة العربية",
+   "function": "UWRatio",
+   "expected_score": 74,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "arabic_harakat_phrase"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "اللُّغَةُ العَرَبِيَّةُ",
+   "input_b": "اللغة العربية",
+   "function": "UQRatio",
+   "expected_score": 74,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "arabic_harakat_phrase"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "हिन्दी",
+   "input_b": "हिंदी",
+   "function": "token_sort_ratio",
+   "expected_score": 75,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "devanagari_mc_mn"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "हिन्दी",
+   "input_b": "हिंदी",
+   "function": "token_set_ratio",
+   "expected_score": 100,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "devanagari_mc_mn"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "हिन्दी",
+   "input_b": "हिंदी",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 80,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "devanagari_mc_mn"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "हिन्दी",
+   "input_b": "हिंदी",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "devanagari_mc_mn"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "हिन्दी",
+   "input_b": "हिंदी",
+   "function": "WRatio",
+   "expected_score": 95,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "devanagari_mc_mn"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "हिन्दी",
+   "input_b": "हिंदी",
+   "function": "QRatio",
+   "expected_score": 89,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "devanagari_mc_mn"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "हिन्दी",
+   "input_b": "हिंदी",
+   "function": "UWRatio",
+   "expected_score": 95,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "devanagari_mc_mn"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "हिन्दी",
+   "input_b": "हिंदी",
+   "function": "UQRatio",
+   "expected_score": 89,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "devanagari_mc_mn"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "दिल्ली",
+   "input_b": "दलल",
+   "function": "token_sort_ratio",
+   "expected_score": 75,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "devanagari_matras"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "दिल्ली",
+   "input_b": "दलल",
+   "function": "token_set_ratio",
+   "expected_score": 67,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "devanagari_matras"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "दिल्ली",
+   "input_b": "दलल",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 67,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "devanagari_matras"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "दिल्ली",
+   "input_b": "दलल",
+   "function": "partial_token_set_ratio",
+   "expected_score": 80,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "devanagari_matras"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "दिल्ली",
+   "input_b": "दलल",
+   "function": "WRatio",
+   "expected_score": 75,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "devanagari_matras"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "दिल्ली",
+   "input_b": "दलल",
+   "function": "QRatio",
+   "expected_score": 75,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "devanagari_matras"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "दिल्ली",
+   "input_b": "दलल",
+   "function": "UWRatio",
+   "expected_score": 75,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "devanagari_matras"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "दिल्ली",
+   "input_b": "दलल",
+   "function": "UQRatio",
+   "expected_score": 75,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "devanagari_matras"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "uͣnͤcͥiͦaͧl",
+   "input_b": "uncial",
+   "function": "token_sort_ratio",
+   "expected_score": 35,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "combining_latin_0363"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "uͣnͤcͥiͦaͧl",
+   "input_b": "uncial",
+   "function": "token_set_ratio",
+   "expected_score": 35,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "combining_latin_0363"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "uͣnͤcͥiͦaͧl",
+   "input_b": "uncial",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 50,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "combining_latin_0363"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "uͣnͤcͥiͦaͧl",
+   "input_b": "uncial",
+   "function": "partial_token_set_ratio",
+   "expected_score": 50,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "combining_latin_0363"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "uͣnͤcͥiͦaͧl",
+   "input_b": "uncial",
+   "function": "WRatio",
+   "expected_score": 71,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "combining_latin_0363"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "uͣnͤcͥiͦaͧl",
+   "input_b": "uncial",
+   "function": "QRatio",
+   "expected_score": 71,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "combining_latin_0363"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "uͣnͤcͥiͦaͧl",
+   "input_b": "uncial",
+   "function": "UWRatio",
+   "expected_score": 71,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "combining_latin_0363"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "uͣnͤcͥiͦaͧl",
+   "input_b": "uncial",
+   "function": "UQRatio",
+   "expected_score": 71,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "combining_latin_0363"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "oͨvͩeͪrͫlͬaͭiͮdͯ",
+   "input_b": "overlaid",
+   "function": "token_sort_ratio",
+   "expected_score": 17,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "combining_latin_0368_036F"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "oͨvͩeͪrͫlͬaͭiͮdͯ",
+   "input_b": "overlaid",
+   "function": "token_set_ratio",
+   "expected_score": 17,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "combining_latin_0368_036F"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "oͨvͩeͪrͫlͬaͭiͮdͯ",
+   "input_b": "overlaid",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 36,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "combining_latin_0368_036F"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "oͨvͩeͪrͫlͬaͭiͮdͯ",
+   "input_b": "overlaid",
+   "function": "partial_token_set_ratio",
+   "expected_score": 36,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "combining_latin_0368_036F"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "oͨvͩeͪrͫlͬaͭiͮdͯ",
+   "input_b": "overlaid",
+   "function": "WRatio",
+   "expected_score": 70,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "combining_latin_0368_036F"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "oͨvͩeͪrͫlͬaͭiͮdͯ",
+   "input_b": "overlaid",
+   "function": "QRatio",
+   "expected_score": 70,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "combining_latin_0368_036F"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "oͨvͩeͪrͫlͬaͭiͮdͯ",
+   "input_b": "overlaid",
+   "function": "UWRatio",
+   "expected_score": 70,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "combining_latin_0368_036F"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "oͨvͩeͪrͫlͬaͭiͮdͯ",
+   "input_b": "overlaid",
+   "function": "UQRatio",
+   "expected_score": 70,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "combining_latin_0368_036F"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "γλωσσᾳ",
+   "input_b": "γλωσσα",
+   "function": "token_sort_ratio",
+   "expected_score": 100,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "greek_ypogegrammeni_0345"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "γλωσσᾳ",
+   "input_b": "γλωσσα",
+   "function": "token_set_ratio",
+   "expected_score": 100,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "greek_ypogegrammeni_0345"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "γλωσσᾳ",
+   "input_b": "γλωσσα",
+   "function": "partial_token_sort_ratio",
+   "expected_score": 100,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "greek_ypogegrammeni_0345"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "γλωσσᾳ",
+   "input_b": "γλωσσα",
+   "function": "partial_token_set_ratio",
+   "expected_score": 100,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "greek_ypogegrammeni_0345"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "γλωσσᾳ",
+   "input_b": "γλωσσα",
+   "function": "WRatio",
+   "expected_score": 100,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "greek_ypogegrammeni_0345"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "γλωσσᾳ",
+   "input_b": "γλωσσα",
+   "function": "QRatio",
+   "expected_score": 100,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "greek_ypogegrammeni_0345"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "γλωσσᾳ",
+   "input_b": "γλωσσα",
+   "function": "UWRatio",
+   "expected_score": 100,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "greek_ypogegrammeni_0345"
+  },
+  {
+   "category": "combining_mark",
+   "input_a": "γλωσσᾳ",
+   "input_b": "γλωσσα",
+   "function": "UQRatio",
+   "expected_score": 100,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "greek_ypogegrammeni_0345"
+  },
+  {
+   "category": "wratio_half_boundary",
+   "input_a": "xxyyxxyyy",
+   "input_b": "  xxyxy x  yy y yxxyx    yx  ",
+   "function": "WRatio",
+   "expected_score": 67,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "[0,100]-space arithmetic yields 66"
+  },
+  {
+   "category": "wratio_half_boundary",
+   "input_a": "xx xx  xxy ",
+   "input_b": "x yy x x  yxyyxx    ",
+   "function": "WRatio",
+   "expected_score": 67,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "[0,100]-space arithmetic yields 66"
+  },
+  {
+   "category": "wratio_half_boundary",
+   "input_a": "xxy  xx  yxx yxyy    yy",
+   "input_b": " xyxyyxy x ",
+   "function": "WRatio",
+   "expected_score": 67,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "[0,100]-space arithmetic yields 66"
+  },
+  {
+   "category": "wratio_half_boundary",
+   "input_a": "    y  yyx xxx",
+   "input_b": " xxyyxxxyyxxyxyyyxxxxxyy ",
+   "function": "WRatio",
+   "expected_score": 67,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "[0,100]-space arithmetic yields 66"
+  },
+  {
+   "category": "wratio_half_boundary",
+   "input_a": " xyy xx yxy xxyy yxy",
+   "input_b": "  x  xxxxy   y",
+   "function": "WRatio",
+   "expected_score": 67,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "[0,100]-space arithmetic yields 66"
+  },
+  {
+   "category": "wratio_half_boundary",
+   "input_a": " yyx y  y x",
+   "input_b": " xy xyxxy xyy xy",
+   "function": "WRatio",
+   "expected_score": 67,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "[0,100]-space arithmetic yields 66"
+  },
+  {
+   "category": "wratio_half_boundary",
+   "input_a": " yy yxyyxy",
+   "input_b": "xy xy x xxy yyy",
+   "function": "WRatio",
+   "expected_score": 67,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "[0,100]-space arithmetic yields 66"
+  },
+  {
+   "category": "wratio_half_boundary",
+   "input_a": "xxy  xxx  y y",
+   "input_b": "  xyyyyyyxyx xyxyyyxyxxy x x x",
+   "function": "WRatio",
+   "expected_score": 67,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "[0,100]-space arithmetic yields 66"
+  },
+  {
+   "category": "wratio_half_boundary",
+   "input_a": "yxyyxxy x",
+   "input_b": "xyxxx   xyx  y",
+   "function": "WRatio",
+   "expected_score": 67,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "[0,100]-space arithmetic yields 66"
+  },
+  {
+   "category": "wratio_half_boundary",
+   "input_a": " x yyyy xy xx y yyyxx ",
+   "input_b": "yxy yxxyxy",
+   "function": "WRatio",
+   "expected_score": 67,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "[0,100]-space arithmetic yields 66"
+  },
+  {
+   "category": "wratio_half_boundary",
+   "input_a": "yyyxxxxy yyx  y",
+   "input_b": "xyy yxyxyy",
+   "function": "WRatio",
+   "expected_score": 67,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "[0,100]-space arithmetic yields 66"
+  },
+  {
+   "category": "wratio_half_boundary",
+   "input_a": "x  yxxyx y",
+   "input_b": "xx xyyyy yxxxxxx yxx  ",
+   "function": "WRatio",
+   "expected_score": 67,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "[0,100]-space arithmetic yields 66"
+  },
+  {
+   "category": "wratio_half_boundary",
+   "input_a": " yyyyyāy yy  xy   yyyxyxxyx ",
+   "input_b": "ā   xxy y y    y",
+   "function": "UWRatio",
+   "expected_score": 67,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "[0,100]-space arithmetic yields 66"
+  },
+  {
+   "category": "wratio_half_boundary",
+   "input_a": "āyxx y  xxyyx xy yxx x x x",
+   "input_b": "    ā xyx yyx ",
+   "function": "UWRatio",
+   "expected_score": 67,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "[0,100]-space arithmetic yields 66"
+  },
+  {
+   "category": "wratio_half_boundary",
+   "input_a": "  yāx yxyxy",
+   "input_b": "āxxxy   yxy    yy   y yxx  xx",
+   "function": "UWRatio",
+   "expected_score": 67,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "[0,100]-space arithmetic yields 66"
+  },
+  {
+   "category": "wratio_half_boundary",
+   "input_a": " āyxx  xyxyxx yxyy xxx  x",
+   "input_b": " yy yy āyy    xx",
+   "function": "UWRatio",
+   "expected_score": 67,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "[0,100]-space arithmetic yields 66"
+  },
+  {
+   "category": "wratio_half_boundary",
+   "input_a": "āyy yy yxy    y y  y  ",
+   "input_b": "yyyyy ā x",
+   "function": "UWRatio",
+   "expected_score": 67,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "[0,100]-space arithmetic yields 66"
+  },
+  {
+   "category": "wratio_half_boundary",
+   "input_a": "āx  y   xx yy xx yxxx y xy",
+   "input_b": "  yyyāx yxy",
+   "function": "UWRatio",
+   "expected_score": 67,
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "[0,100]-space arithmetic yields 66"
+  }
+ ],
+ "full_process_cases": [
+  {
+   "input": "Lorem Ipsum!!! 123",
+   "force_ascii": true,
+   "output": "lorem ipsum    123"
+  },
+  {
+   "input": "  spaced\tout  ",
+   "force_ascii": true,
+   "output": "spaced out"
+  },
+  {
+   "input": "Café-au-lait №5",
+   "force_ascii": true,
+   "output": "caf au lait  5"
+  },
+  {
+   "input": "Café-au-lait №5",
+   "force_ascii": false,
+   "output": "café au lait  5"
+  },
+  {
+   "input": "北京 Beijing!",
+   "force_ascii": true,
+   "output": "北京 beijing"
+  },
+  {
+   "input": "北京 Beijing!",
+   "force_ascii": false,
+   "output": "北京 beijing"
+  },
+  {
+   "input": "ÀÉÎÕÜ",
+   "force_ascii": true,
+   "output": ""
+  },
+  {
+   "input": "ÀÉÎÕÜ",
+   "force_ascii": false,
+   "output": "àéîõü"
+  },
+  {
+   "input": "__under_score__",
+   "force_ascii": true,
+   "output": "under score"
+  },
+  {
+   "input": "שָׁלוֹם",
+   "force_ascii": true,
+   "output": "ש  לו ם",
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "hebrew_niqqud_word"
+  },
+  {
+   "input": "שָׁלוֹם",
+   "force_ascii": false,
+   "output": "ש  לו ם",
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "hebrew_niqqud_word"
+  },
+  {
+   "input": "שָׁלוֹם עֲלֵיכֶם",
+   "force_ascii": true,
+   "output": "ש  לו ם ע ל יכ ם",
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "hebrew_niqqud_phrase"
+  },
+  {
+   "input": "שָׁלוֹם עֲלֵיכֶם",
+   "force_ascii": false,
+   "output": "ש  לו ם ע ל יכ ם",
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "hebrew_niqqud_phrase"
+  },
+  {
+   "input": "مُحَمَّدٌ",
+   "force_ascii": true,
+   "output": "م ح م  د",
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "arabic_harakat_word"
+  },
+  {
+   "input": "مُحَمَّدٌ",
+   "force_ascii": false,
+   "output": "م ح م  د",
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "arabic_harakat_word"
+  },
+  {
+   "input": "اللُّغَةُ العَرَبِيَّةُ",
+   "force_ascii": true,
+   "output": "الل  غ ة  الع ر ب ي  ة",
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "arabic_harakat_phrase"
+  },
+  {
+   "input": "اللُّغَةُ العَرَبِيَّةُ",
+   "force_ascii": false,
+   "output": "الل  غ ة  الع ر ب ي  ة",
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "arabic_harakat_phrase"
+  },
+  {
+   "input": "हिन्दी",
+   "force_ascii": true,
+   "output": "ह न द",
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "devanagari_mc_mn"
+  },
+  {
+   "input": "हिन्दी",
+   "force_ascii": false,
+   "output": "ह न द",
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "devanagari_mc_mn"
+  },
+  {
+   "input": "दिल्ली",
+   "force_ascii": true,
+   "output": "द ल ल",
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "devanagari_matras"
+  },
+  {
+   "input": "दिल्ली",
+   "force_ascii": false,
+   "output": "द ल ल",
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "devanagari_matras"
+  },
+  {
+   "input": "uͣnͤcͥiͦaͧl",
+   "force_ascii": true,
+   "output": "u n c i a l",
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "combining_latin_0363"
+  },
+  {
+   "input": "uͣnͤcͥiͦaͧl",
+   "force_ascii": false,
+   "output": "u n c i a l",
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "combining_latin_0363"
+  },
+  {
+   "input": "oͨvͩeͪrͫlͬaͭiͮdͯ",
+   "force_ascii": true,
+   "output": "o v e r l a i d",
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "combining_latin_0368_036F"
+  },
+  {
+   "input": "oͨvͩeͪrͫlͬaͭiͮdͯ",
+   "force_ascii": false,
+   "output": "o v e r l a i d",
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "combining_latin_0368_036F"
+  },
+  {
+   "input": "γλωσσᾳ",
+   "force_ascii": true,
+   "output": "γλωσσα",
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "greek_ypogegrammeni_0345"
+  },
+  {
+   "input": "γλωσσᾳ",
+   "force_ascii": false,
+   "output": "γλωσσα",
+   "amendment": 1,
+   "provenance": "amendment-1: thefuzz==0.22.1 rapidfuzz==3.14.5 python 3.14.7",
+   "note": "greek_ypogegrammeni_0345"
+  }
+ ],
+ "process_cases": {
+  "extract_default": {
+   "query": "brave new cubs",
+   "choices": [
+    "new york mets vs chicago cubs",
+    "chicago cubs vs chicago white sox",
+    "philladelphia phillies vs atlanta braves",
+    "braves vs mets",
+    "東京タワー"
+   ],
+   "limit": 3,
+   "result": [
+    [
+     "new york mets vs chicago cubs",
+     86
+    ],
+    [
+     "chicago cubs vs chicago white sox",
+     86
+    ],
+    [
+     "braves vs mets",
+     57
+    ]
+   ]
+  },
+  "extractOne_default": {
+   "query": "cubs vs mets",
+   "choices": [
+    "new york mets vs chicago cubs",
+    "chicago cubs vs chicago white sox",
+    "philladelphia phillies vs atlanta braves",
+    "braves vs mets",
+    "東京タワー"
+   ],
+   "result": [
+    "new york mets vs chicago cubs",
+    86
+   ]
+  },
+  "extractOne_cutoff_none": {
+   "query": "zzzzzz",
+   "choices": [
+    "new york mets vs chicago cubs",
+    "chicago cubs vs chicago white sox",
+    "philladelphia phillies vs atlanta braves",
+    "braves vs mets",
+    "東京タワー"
+   ],
+   "score_cutoff": 60,
+   "result": null
+  },
+  "extractOne_unicode": {
+   "query": "東京タワー",
+   "choices": [
+    "new york mets vs chicago cubs",
+    "chicago cubs vs chicago white sox",
+    "philladelphia phillies vs atlanta braves",
+    "braves vs mets",
+    "東京タワー"
+   ],
+   "result": [
+    "東京タワー",
+    100
+   ]
+  },
+  "extract_scorer_ratio": {
+   "query": "cubs",
+   "choices": [
+    "new york mets vs chicago cubs",
+    "chicago cubs vs chicago white sox",
+    "philladelphia phillies vs atlanta braves",
+    "braves vs mets",
+    "東京タワー"
+   ],
+   "scorer": "ratio",
+   "limit": 2,
+   "result": [
+    [
+     "new york mets vs chicago cubs",
+     24
+    ],
+    [
+     "braves vs mets",
+     22
+    ]
+   ]
+  },
+  "extractWithoutOrder_cutoff50": {
+   "query": "chicago cubs",
+   "choices": [
+    "new york mets vs chicago cubs",
+    "chicago cubs vs chicago white sox",
+    "philladelphia phillies vs atlanta braves",
+    "braves vs mets",
+    "東京タワー"
+   ],
+   "score_cutoff": 50,
+   "result": [
+    [
+     "new york mets vs chicago cubs",
+     90
+    ],
+    [
+     "chicago cubs vs chicago white sox",
+     90
+    ]
+   ]
+  },
+  "dedupe_default": {
+   "input": [
+    "Frodo Baggin",
+    "Frodo Baggins",
+    "F. Baggins",
+    "Samwise G.",
+    "Gandalf",
+    "Bilbo Baggins"
+   ],
+   "threshold": 70,
+   "result": [
+    "Frodo Baggins",
+    "Gandalf",
+    "Samwise G."
+   ]
+  },
+  "dedupe_no_dupes_returns_original": {
+   "input": [
+    "alpha",
+    "omega"
+   ],
+   "threshold": 70,
+   "result": [
+    "alpha",
+    "omega"
+   ]
+  }
+ }
+}

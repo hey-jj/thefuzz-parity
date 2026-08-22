@@ -1,0 +1,64 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  stable:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
+      - run: cargo build --locked
+      - run: cargo build --locked --no-default-features
+      - run: cargo test --locked
+      - run: cargo test --locked --no-default-features
+      - run: cargo test --release --locked
+      - run: cargo clippy --all-targets --all-features -- -D warnings
+      - run: cargo fmt --check
+      - run: python3 -m unittest tools/test_gen_unicode_tables.py
+      - name: Install prose gate
+        run: cargo install ai-slop --version 0.1.10 --locked
+      - name: Check README prose
+        run: ai-slop check --profile readme README.md
+      - name: Check changelog prose
+        run: ai-slop check --profile changelog CHANGELOG.md
+      - name: Check package metadata
+        run: ai-slop check --profile cargo-metadata Cargo.toml
+      - name: Check API documentation
+        shell: bash
+        run: |
+          rg --no-heading --no-filename '^\s*//[/!]' src \
+            | sed -E 's/^[[:space:]]*\/\/[\/!] ?//' \
+            > "$RUNNER_TEMP/api-docs.md"
+          test -s "$RUNNER_TEMP/api-docs.md"
+          ai-slop check --profile api-docs "$RUNNER_TEMP/api-docs.md"
+      - run: cargo test --locked --test conformance all_score_vectors_match
+      - run: cargo test --locked --test conformance all_full_process_vectors_match
+      - run: cargo test --locked --test conformance all_selector_vectors_match
+      - run: cargo test --locked --test conformance fp_combining_mark
+      - run: cargo test --locked --test conformance wratio_normalized
+      - run: cargo test --locked --test unicode_totality
+      - run: cargo run --manifest-path fuzz/Cargo.toml --profile fuzz
+      - run: cargo test --release --locked --test perf_subcubic -- --exact perf_subcubic
+
+  msrv:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: dtolnay/rust-toolchain@1.70.0
+      - name: Build shipped library and documentation
+        shell: bash
+        run: |
+          scratch="$(mktemp -d)"
+          cp -R . "$scratch/crate"
+          perl -0pi -e 's/\n\[dev-dependencies\].*?(?=\n\[|\z)/\n/s' "$scratch/crate/Cargo.toml"
+          rm -f "$scratch/crate/Cargo.lock"
+          cargo build --lib --manifest-path "$scratch/crate/Cargo.toml" --target-dir "$scratch/target"
+          cargo test --doc --manifest-path "$scratch/crate/Cargo.toml" --target-dir "$scratch/target"
