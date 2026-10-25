@@ -1,12 +1,12 @@
 [package]
 name = "thefuzz-parity"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 rust-version = "1.70"
 authors = ["Justin Jones <hey.jones@icloud.com>"]
 license = "MIT"
-description = "Unicode fuzzy scoring and ranked choice extraction. Not affiliated with SeatGeek or the thefuzz maintainers. Parity is a tested claim against thefuzz 0.22.1."
-keywords = ["fuzzy", "fuzzywuzzy", "similarity", "search", "unicode"]
+description = "Unicode fuzzy string scoring and ranked choice extraction, with score parity tested against a pinned Python release. Not affiliated with SeatGeek."
+keywords = ["fuzzy", "string-matching", "similarity", "search", "unicode"]
 categories = ["algorithms", "text-processing"]
 readme = "README.md"
 repository = "https://github.com/hey-jj/thefuzz-parity"

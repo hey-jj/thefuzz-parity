@@ -2,7 +2,7 @@
 
 use std::collections::BTreeSet;
 
-use crate::matcher::lcs_len;
+use crate::matcher::{lcs_len, Pattern};
 use crate::utils::full_process;
 
 /// Computes the indel similarity of two strings.
@@ -16,8 +16,9 @@ pub fn ratio(a: &str, b: &str) -> u8 {
     )
 }
 
-/// Finds the best indel similarity between the shorter input and an aligned
-/// window of the longer input.
+/// Finds the best indel similarity between the shorter input and any aligned
+/// window of the longer input, skipping windows that cannot beat the best score
+/// found so far.
 #[must_use]
 pub fn partial_ratio(a: &str, b: &str) -> u8 {
     round_score(
@@ -89,13 +90,19 @@ pub(crate) fn ratio_raw(a: &str, b: &str) -> f64 {
     )
 }
 
-#[allow(clippy::cast_precision_loss)]
 fn ratio_raw_chars(a: &[char], b: &[char]) -> f64 {
-    let total = a.len() + b.len();
+    similarity(a.len(), b.len(), lcs_len(a, b))
+}
+
+/// Indel similarity of two sequences from their lengths and the length of
+/// their longest common subsequence.
+#[allow(clippy::cast_precision_loss)]
+fn similarity(a_len: usize, b_len: usize, lcs: usize) -> f64 {
+    let total = a_len + b_len;
     if total == 0 {
         1.0
     } else {
-        let distance = total - 2 * lcs_len(a, b);
+        let distance = total - 2 * lcs;
         1.0 - distance as f64 / total as f64
     }
 }
@@ -113,36 +120,97 @@ fn partial_ratio_raw_chars(a: &[char], b: &[char]) -> f64 {
         return if longer.is_empty() { 1.0 } else { 0.0 };
     }
 
-    let score = exhaustive_partial_ratio(shorter, longer);
+    let score = best_window(shorter, longer);
     if a.len() == b.len() && score < 1.0 {
-        let reverse = exhaustive_partial_ratio(longer, shorter);
-        score.max(reverse)
+        score.max(best_window(longer, shorter))
     } else {
         score
     }
 }
 
+/// Best similarity of `needle` against the windows of `haystack`: every
+/// full-width window, every prefix shorter than the needle, and every suffix
+/// up to the needle's length. Requires `0 < needle.len() <= haystack.len()`.
 #[allow(clippy::float_cmp)]
-fn exhaustive_partial_ratio(shorter: &[char], longer: &[char]) -> f64 {
-    let width = shorter.len();
-    let mut best = 0.0_f64;
-
-    for start in 0..=longer.len() - width {
-        best = best.max(ratio_raw_chars(shorter, &longer[start..start + width]));
-        if best == 1.0 {
-            return best;
-        }
+fn best_window(needle: &[char], haystack: &[char]) -> f64 {
+    let width = needle.len();
+    let pattern = Pattern::new(needle);
+    let mut best = pruned_full_windows(&pattern, haystack);
+    if best == 1.0 {
+        return best;
     }
 
-    for boundary_width in 1..width {
-        best = best.max(ratio_raw_chars(shorter, &longer[..boundary_width]));
-        best = best.max(ratio_raw_chars(
-            shorter,
-            &longer[longer.len() - boundary_width..],
-        ));
-    }
-
+    // One pass over the haystack scores every prefix window.
+    pattern.prefix_lcs(haystack[..width - 1].iter().copied(), |len, lcs| {
+        best = best.max(similarity(width, len, lcs));
+    });
+    // Reversing both sides turns each suffix window into a prefix window.
+    let reversed: Vec<char> = needle.iter().rev().copied().collect();
+    Pattern::new(&reversed).prefix_lcs(haystack.iter().rev().take(width).copied(), |len, lcs| {
+        best = best.max(similarity(width, len, lcs));
+    });
     best
+}
+
+/// Best similarity over the full-width windows that start before the last one.
+///
+/// Neighboring windows differ in one character at each end, so their indel
+/// distances differ by at most 2, and every distance between equal-length
+/// sequences is even. Those two facts bound the smallest distance inside a
+/// span from its endpoint distances. Spans whose bound cannot beat the best
+/// distance found so far are skipped, and the rest are split in half. The
+/// final window is scored with the suffix windows.
+#[allow(clippy::cast_precision_loss, clippy::cast_possible_wrap)]
+fn pruned_full_windows(pattern: &Pattern, haystack: &[char]) -> f64 {
+    let width = pattern.len();
+    let last_start = haystack.len() - width;
+    if last_start == 0 {
+        return 0.0;
+    }
+
+    let maximum = 2 * width;
+    let distance =
+        |start: usize| maximum - 2 * pattern.lcs(haystack[start..start + width].iter().copied());
+    let mut cutoff = maximum;
+    let mut best_distance = None;
+    let mut scores = vec![usize::MAX; last_start];
+    let mut spans = vec![(0, last_start - 1)];
+    let mut next_spans = Vec::new();
+
+    while !spans.is_empty() {
+        for &(first, second) in &spans {
+            for start in [first, second] {
+                if scores[start] == usize::MAX {
+                    let found = distance(start);
+                    scores[start] = found;
+                    if found < cutoff {
+                        cutoff = found;
+                        best_distance = Some(found);
+                        if found == 0 {
+                            return 1.0;
+                        }
+                    }
+                }
+            }
+
+            let cells = second - first;
+            if cells == 1 {
+                continue;
+            }
+            let known_edits = scores[first].abs_diff(scores[second]);
+            let max_improvement = (cells - known_edits / 2) / 2 * 2;
+            let lowest = scores[first].min(scores[second]) as isize - max_improvement as isize;
+            if lowest < cutoff as isize {
+                let center = cells / 2;
+                next_spans.push((first, first + center));
+                next_spans.push((first + center, second));
+            }
+        }
+        std::mem::swap(&mut spans, &mut next_spans);
+        next_spans.clear();
+    }
+
+    best_distance.map_or(0.0, |found| 1.0 - found as f64 / maximum as f64)
 }
 
 fn prepare_pair(a: &str, b: &str, force_ascii: bool, process: bool) -> (String, String) {
@@ -267,3 +335,7 @@ pub(crate) fn round_score(value: f64) -> u8 {
     };
     rounded.clamp(0.0, 100.0) as u8
 }
+
+#[cfg(test)]
+#[path = "fuzz_tests.rs"]
+pub(crate) mod tests;
